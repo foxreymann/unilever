@@ -1,3 +1,15 @@
 body {
     text-align:center;
 }
+.navbar-inverse .navbar-inner {
+    background-color: #F50F43;
+}
+.navbar-inverse .navbar-inner a{
+    width:100%;
+}
+#gender img {
+    
+}
+footer {
+    margin-top:200px;
+}
