@@ -7,9 +7,18 @@ body {
 .navbar-inverse .navbar-inner a{
     width:100%;
 }
-#gender img {
-    
+#gender img{
+    border: 20px solid #fff;
+}
+#gender img.hover{
+    border: 20px groove #41BB19;
 }
 footer {
     margin-top:200px;
+}
+article {
+    margin-top:200px;
+}
+#gender {
+    margin-top:0;
 }
