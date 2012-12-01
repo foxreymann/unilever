@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 101 Template</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link href="css/app.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+
+    <article id="gender">
+        <div class="row-fluid">
+            <div class="alert alert-info">
+                <h2>
+                    Choose your gender!
+                </h2>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span6">
+                <img src="img/female.png" class="wiggle"  />
+            </div>
+            <div class="span6">
+                <img src="img/male-and-buster.png" class="wiggle"  />
+            </div>
+        </div>
+    </article>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wiggle.jquery.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
+
+
+
+<!--
+
+
+
+<html> 
+<head> 
+    <title>My Page</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/app.css" />
+
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    <script src="js/app.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="one"> 
+    <div data-role="header">
+        <h1>Gender?</h1>
+    </div>
+
+    <div class="ui-grid-a">
+        <div class="ui-block-a">
+        </div>
+        <div class="ui-block-b">
+        </div>
+    </div>
+
+</div>
+
+<div data-role="page" id="two">
+
+</div>
+
+</body>
+</html>
