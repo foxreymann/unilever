@@ -1,23 +1,37 @@
-<!DOCTYPE html> 
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootstrap 101 Template</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link href="css/app.css" rel="stylesheet" media="screen">
   </head>
   <body>
-    <div class="row-fluid" id="gender">
-        <div class="span6">
-            <img src="img/male-and-buster.png" class="gender-sign"  />
+
+    <article id="gender">
+        <div class="row-fluid">
+            <div class="alert alert-info">
+                <h2>
+                    Choose your gender!
+                </h2>
+            </div>
         </div>
-        <div class="span6">
-            <img src="img/male-and-buster.png" class="gender-sign"  />
+        <div class="row-fluid">
+            <div class="span6">
+                <img src="img/female.png" class="wiggle"  />
+            </div>
+            <div class="span6">
+                <img src="img/male-and-buster.png" class="wiggle"  />
+            </div>
         </div>
-    </div>
+    </article>
+
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/wiggle.jquery.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
 
