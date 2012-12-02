@@ -27,6 +27,7 @@ $(document).ready(function(){
 
     $('#age-slider').change(function(){
         currentValue.html(this.value);
+        simulateAging(this.value);
     });
 
     // Trigger the event on load, so
@@ -34,3 +35,19 @@ $(document).ready(function(){
     $('#age-slider').change();
 
 });
+
+var simulateAging = function(age) {
+    console.log(age);
+    $('#age-images img').hide();
+    if(age < 30) {
+        $('#18years').show();
+    } else if(age < 40) {
+        $('#30years').show();
+    } else if(age < 50) {
+        $('#40years').show();
+    } else if(age < 70) {
+        $('#50years').show();
+    } else {
+        $('#70years').show();
+    }
+}
