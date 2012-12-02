@@ -20,7 +20,10 @@ $(document).ready(function(){
     );
 
     $("#gender img").click(function() {
-        $(window).scrollTop($('#age').offset().top);
+        $(this).removeClass("hover").addClass("selected");
+        setTimeout(function(){
+            $(window).scrollTop($('#age').offset().top);
+        },1000);
     });
 
     var currentValue = $('#my-age');
