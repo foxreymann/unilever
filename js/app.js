@@ -23,4 +23,14 @@ $(document).ready(function(){
         $(window).scrollTop($('#age').offset().top);
     });
 
+    var currentValue = $('#my-age');
+
+    $('#age-slider').change(function(){
+        currentValue.html(this.value);
+    });
+
+    // Trigger the event on load, so
+    // the value field is populated:
+    $('#age-slider').change();
+
 });

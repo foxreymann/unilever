@@ -23,7 +23,8 @@ article {
     margin-top:0;
 }
 #age img {
-    width:50%;
+    width:80%;
+    max-width:300px;
 }
 
 /*
