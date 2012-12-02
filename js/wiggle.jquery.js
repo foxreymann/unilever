@@ -12,41 +12,43 @@
 
 		var methods = {
 			wiggle: function(object, step){
-				if(step === undefined) {
-					step = options.randomStart ? Math.floor(Math.random()*options.wiggleDegrees.length) : 0;
-				}
+                if(!navigator.userAgent.match(/iPhone/i)) {
+                    if(step === undefined) {
+                        step = options.randomStart ? Math.floor(Math.random()*options.wiggleDegrees.length) : 0;
+                    }
 
-				if(!$(object).hasClass('wiggling')) {
-					$(object).addClass('wiggling');
-				}
+                    if(!$(object).hasClass('wiggling')) {
+                        $(object).addClass('wiggling');
+                    }
 
-				var degree = options.wiggleDegrees[step];
-				$(object).css({
-					'-webkit-transform': 'rotate('+degree+'deg)',
-					'-moz-transform': 'rotate('+degree+'deg)',
-					'-o-transform': 'rotate('+degree+'deg)',
-					'-sand-transform': 'rotate('+degree+'deg)',
-					'-ms-transform': 'rotate('+degree+'deg)',
-					'transform': 'rotate('+degree+'deg)'
-				});
+                    var degree = options.wiggleDegrees[step];
+                    $(object).css({
+                        '-webkit-transform': 'rotate('+degree+'deg)',
+                        '-moz-transform': 'rotate('+degree+'deg)',
+                        '-o-transform': 'rotate('+degree+'deg)',
+                        '-sand-transform': 'rotate('+degree+'deg)',
+                        '-ms-transform': 'rotate('+degree+'deg)',
+                        'transform': 'rotate('+degree+'deg)'
+                    });
 
-				if(step == (options.wiggleDegrees.length - 1)) {
-					step = 0;
-					if($(object).data('wiggles') === undefined) {
-						$(object).data('wiggles', 1);
-					} else {
-						$(object).data('wiggles', $(object).data('wiggles') + 1);
-					}
-					options.onWiggle(object);
-				}
+                    if(step == (options.wiggleDegrees.length - 1)) {
+                        step = 0;
+                        if($(object).data('wiggles') === undefined) {
+                            $(object).data('wiggles', 1);
+                        } else {
+                            $(object).data('wiggles', $(object).data('wiggles') + 1);
+                        }
+                        options.onWiggle(object);
+                    }
 
-				if(options.limit && $(object).data('wiggles') == options.limit) {
-					return methods.stop(object);
-				}
+                    if(options.limit && $(object).data('wiggles') == options.limit) {
+                        return methods.stop(object);
+                    }
 
-				object.timeout = setTimeout(function(){
-					methods.wiggle(object, step+1);
-				}, options.delay);
+                    object.timeout = setTimeout(function(){
+                        methods.wiggle(object, step+1);
+                    }, options.delay);
+                }
 			},
 			stop: function(object) {
 				$(object).data('wiggles', 0);

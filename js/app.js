@@ -20,8 +20,7 @@ $(document).ready(function(){
     );
 
     $("#gender img").click(function() {
-        location.hash = "#age";
+        $(window).scrollTop($('#age').offset().top);
     });
-    
 
 });
